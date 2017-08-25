@@ -20,7 +20,7 @@ def reply_self(msg):
 # 启用 puid 属性，并指定 puid 所需的映射数据保存/载入路径
 bot.enable_puid('wxpy_puid.pkl')
 
-@bot.register()
+@bot.register(msg_types=FRIENDS)
 def print_messages(msg):
     print(msg)
 
