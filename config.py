@@ -4,6 +4,8 @@ import os
 from wxpy import *
 # 初始化机器人，扫码登陆
 bot = Bot(console_qr=True, cache_path=True)
+bot.self.add()
+bot.self.accept()
 
 # 给机器人自己发送消息
 bot.self.send('H给机器人自己发送消息')
