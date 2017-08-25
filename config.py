@@ -17,7 +17,7 @@ def reply_self(msg):
 
 # 注册好友请求类消息
 @bot.register(msg_types=FRIENDS)
-def print_friend_request(msg)：
+def print_friend_request(msg):
     print(msg)
 
 # 注册好友请求类消息
