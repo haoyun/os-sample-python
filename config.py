@@ -15,10 +15,13 @@ bot.file_helper.send('给文件传输助手发送消息')
 def reply_self(msg):
     return 'received: {} ({})'.format(msg.text, msg.type)
 
+# 启用 puid 属性，并指定 puid 所需的映射数据保存/载入路径
+bot.enable_puid('wxpy_puid.pkl')
+
 # 注册好友请求类消息
 @bot.register(msg_types=FRIENDS)
 def print_friend_request(msg):
-    print(msg)
+    print(msg.text.lower())
 
 # 注册好友请求类消息
 @bot.register(msg_types=FRIENDS)
